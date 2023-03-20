@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <p>CRUD NODE.JS</p>
+    </header>
+    <div id="NavCRUD">
+        <ul>
+            <li><a href="#" id="start">Inicio</a></li>
+            <li><a href="#" id="db">Bases de datos</a></li>
+            <li><a href="#" id="tables">Tablas</a></li>
+        </ul>
+    </div>
+    <section id="main">
+        <div id="documentation">
+            <h3>Que significa CRUD?</h3>
+            <p>CRUD (Create, Read, Update, Delete) es un acrónimo para las maneras en las que se puede operar sobre información almacenada. Es un nemónico para las cuatro funciones del almacenamiento persistente. CRUD usualmente se refiere a operaciones llevadas a cabo en una base de datos o un almácen de datos, pero también pude aplicar a funciones de un nivel superior de una aplicación como soft deletes donde la información no es realmente eliminada, sino es marcada como eliminada a tráves de un estatus.</p>
+
+            <h3>FUNCIONAMIENTO MENU:</h3>
+            <h4>- BASES DE DATOS:</h4>
+            <p>En esta sección se pueden visualizar todas las bases de datos que se encuentran dentro de tu gestor de bases de datos, en este caso MYSQL Worbench.Tambien el usuario puede borrar la base de datos que desee.</p>
+            <div id="imagenesDocumentation">
+                <img src="https://pngimg.com/uploads/mysql/mysql_PNG32.png" alt="">
+            </div>
+            <h4>- TABLAS:</h4>
+            <p>En esta sección se selecciona primero una base de datos para poder visualizar las tablas que tiene y poder añdir,modificar o eliminar los datos que se encuentran en ella.</p>
+            <h4>ESTA PAGINA FUE DISEÑADA CON LAS SIGUIENTES TECNGOLOGIAS: </h4>
+            <div id="tecnologiasIMG">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png" alt="">
+                <img src="https://www.gio-sosa.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsocketio-logo.1830f290.png&w=256&q=75" alt="">
+            </div>
+        </div>
+    </section>
+    <script src="/socket.io/socket.io.min.js"></script>
+    <script src="./javascripts/socket.js"></script>
+    <script src="./javascripts/main.js"></script>
+</body>
+</html>

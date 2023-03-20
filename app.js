@@ -27,9 +27,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 
-pool.query('show databases',(err,result)=>{
-  console.log(result);
-})
+
 
 
 // catch 404 and forward to error handler
