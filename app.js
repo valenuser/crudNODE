@@ -26,7 +26,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-
+io.on('connection',(socket)=>{
+  socket.on('client:load',()=>{
+    pool.query('show databases',(err,result)=>{
+      io.emit('server:loadData',result)
+    })
+  })
+})
 
 
 
