@@ -36,10 +36,16 @@ io.on('connection',(socket)=>{
 
   socket.on('client:deleteDB',(idDB)=>{
     pool.query('drop database '+idDB+'')
+    pool.query('show databases',(err,result)=>{
+      io.emit('server:loadData',result)
+    })
     })
 
   socket.on('client:addDB',(nameDB)=>{
       pool.query('create database '+nameDB+'')
+      pool.query('show databases',(err,result)=>{
+        io.emit('server:loadData',result)
+      })
   })
 })
 
