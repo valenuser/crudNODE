@@ -11,7 +11,7 @@ const cardDB = (data)=>{
     const Delete = div.querySelector('#delete')
 
     Delete.addEventListener('click',()=>{
-        console.log(Delete.dataset.id);
+        deleteDB(Delete.dataset.id);
     })
 
     return div
@@ -20,8 +20,8 @@ const cardDB = (data)=>{
 
 
 const loadDB = data =>{
-    console.log(data);
+    showDB.innerHTML = ''
     data.map((d) =>(
-        sectionDB.append(cardDB(d.Database))
+        showDB.append(cardDB(d.Database))
     ))
 }
