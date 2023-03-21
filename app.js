@@ -47,7 +47,14 @@ io.on('connection',(socket)=>{
         io.emit('server:loadData',result)
       })
   })
+
+  socket.on('client:showTables', (nameDB)=>{
+    pool.query('show tables from '+nameDB+'',(err,result)=>{
+      io.emit('server:showTables',result);
+    })
+  })
 })
+
 
 
 
