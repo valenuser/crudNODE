@@ -4,6 +4,7 @@ socket.emit('client:load')
 
 socket.on('server:loadData',(data)=>{
     loadDB(data)
+    loadTable(data)
 })
 
 const deleteDB = (idDB) =>{
