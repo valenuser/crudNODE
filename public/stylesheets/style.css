@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   font-family: 'Poppins', sans-serif;
+  outline: none;
 }
 
 
@@ -120,6 +121,41 @@ header p{
   border-radius: 10px;
   background: green;
   color: white;
+}
+
+#addTableDB{
+  display: none;
+  justify-content: center;
+  width: 99.5%;
+  height: 100px;
+}
+
+#addTableDB i{
+  position: absolute;
+  left: 840px;
+  top: 160px;
+}
+
+#containerADD{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+#containerADD input{
+  width: 260px;
+  margin-bottom: 20px;
+}
+#containerADD button{
+  width: 110px;
+  background: rgb(56, 205, 255);
+  color: white;
+  border-radius: 10px;
+  border: none;
 }
 
 #showDB{
