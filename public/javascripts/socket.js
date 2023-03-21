@@ -8,4 +8,9 @@ socket.on('server:loadData',(data)=>{
 
 const deleteDB = (idDB) =>{
     socket.emit('client:deleteDB',idDB)
+    socket.emit('client:load')
+}
+
+const addDB = (nameDB) =>{
+    socket.emit('client:addDB',nameDB)
 }

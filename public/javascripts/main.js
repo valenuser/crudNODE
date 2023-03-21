@@ -6,6 +6,8 @@ const showDB = document.querySelector('#showDB')
 const addTableDB = document.getElementById('addTableDB')
 const addButtonDB = document.querySelector('#addButtonDB')
 const closeAdd = document.querySelector('#closeAdd')
+const newDB = document.querySelector('#newDB')
+const addNewDB = document.getElementById('addNewDB')
 
 db.addEventListener('click',()=>{
     main.style.display = 'none'
@@ -26,4 +28,9 @@ addButtonDB.addEventListener('click',()=>{
 closeAdd.addEventListener('click',()=>{
     showDB.style.display = 'flex'
     addTableDB.style.display = 'none'
+})
+
+addNewDB.addEventListener('click',()=>{
+    addDB(newDB.value)
+    newDB.value = ''
 })

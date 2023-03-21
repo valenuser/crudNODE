@@ -27,10 +27,6 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 io.on('connection',(socket)=>{
-
-  const loadData = ()=>{
-    return pool.query('show databases')
-  }
   
   socket.on('client:load',()=>{
     pool.query('show databases',(err,result)=>{
@@ -40,8 +36,11 @@ io.on('connection',(socket)=>{
 
   socket.on('client:deleteDB',(idDB)=>{
     pool.query('drop database '+idDB+'')
-    io.emit('server:loadData',loadData())
     })
+
+  socket.on('client:addDB',(nameDB)=>{
+      pool.query('create database '+nameDB+'')
+  })
 })
 
 
