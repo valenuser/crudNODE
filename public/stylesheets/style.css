@@ -129,14 +129,14 @@ header p{
   color: white;
 }
 
-#addTableDB{
+#addNewDB{
   display: none;
   justify-content: center;
   width: 99.5%;
   height: 100px;
 }
 
-#addTableDB i{
+#addNewDB i{
   position: absolute;
   left: 840px;
   top: 160px;
@@ -156,7 +156,7 @@ header p{
   width: 260px;
   margin-bottom: 20px;
 }
-#containerADD button{
+#addNewDBbutton{
   width: 110px;
   background: rgb(56, 205, 255);
   color: white;

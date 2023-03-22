@@ -62,7 +62,7 @@ io.on('connection',(socket)=>{
       for(let i = 0;i < data.length;i++){
         sendData.push(data[i][0])
       }
-      console.log(sendData);
+      
       io.emit('server:showTables', sendData);
     })
   })

@@ -34,15 +34,15 @@ tables.addEventListener('click',()=>{
 
 addButtonDB.addEventListener('click',()=>{
     showDB.style.display = 'none'
-    addTableDB.style.display = 'flex'
+    addNewDB.style.display = 'flex'
 })
 
 closeAdd.addEventListener('click',()=>{
     showDB.style.display = 'flex'
-    addTableDB.style.display = 'none'
+    addNewDB.style.display = 'none'
 })
 
-addNewDB.addEventListener('click',()=>{
+addNewDBbutton.addEventListener('click',()=>{
     addDB(newDB.value)
     newDB.value = ''
 })

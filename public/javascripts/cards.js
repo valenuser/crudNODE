@@ -49,7 +49,7 @@ const cardTable = (data)=>{
     const nameDB = div.querySelector('#nameDB')
 
     nameDB.addEventListener('click',()=>{
-        console.log();(nameDB.dataset.id);
+        console.log(nameDB.dataset.id);
     })
     
     return div
@@ -73,8 +73,6 @@ const loadDBTable = data =>{
 }
 
 const loadTables = data =>{
-    console.log(Object.keys(data[0]));
-    console.log(data);
     tableDB.innerHTML = ''
     data.map((d) =>(
         tableDB.append(cardTable(d))
