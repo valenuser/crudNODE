@@ -15,7 +15,9 @@ const cardDB = (data)=>{
     })
 
     return div
-}   
+}  
+
+
 const cardDBTable = (data)=>{
     const div = document.createElement('div')
     div.className = 'cardTable'
@@ -28,12 +30,14 @@ const cardDBTable = (data)=>{
 
     nameDB.addEventListener('click',()=>{
         tableMain.style.display = 'none'
-        addTableDB.style.display = 'flex'
+        tableDB.style.display = 'flex'
         showTables(nameDB.dataset.id);
     })
     
     return div
-}   
+}  
+
+
 const cardTable = (data)=>{
     const div = document.createElement('div')
     div.className = 'cardTable'
@@ -69,8 +73,10 @@ const loadDBTable = data =>{
 }
 
 const loadTables = data =>{
-    addTableDB.innerHTML = ''
+    console.log(Object.keys(data[0]));
+    console.log(data);
+    tableDB.innerHTML = ''
     data.map((d) =>(
-        addTableDB.append(cardTable(d))
+        tableDB.append(cardTable(d))
     ))
 }

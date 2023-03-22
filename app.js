@@ -50,7 +50,20 @@ io.on('connection',(socket)=>{
 
   socket.on('client:showTables', (nameDB)=>{
     pool.query('show tables from '+nameDB+'',(err,result)=>{
-      io.emit('server:showTables',result);
+
+      let data = []
+      let sendData = []
+
+      for(let i = 0;i < result.length;i++){
+        let properTable = Object.values(result[i])
+        data.push(properTable)
+      }
+
+      for(let i = 0;i < data.length;i++){
+        sendData.push(data[i][0])
+      }
+      console.log(sendData);
+      io.emit('server:showTables', sendData);
     })
   })
 })
